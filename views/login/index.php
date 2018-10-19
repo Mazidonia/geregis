@@ -10,11 +10,8 @@ session_start();
                         <div class="card-body">
                             <img class="img-responsive " src="public/img/announce.jpg" alt="" />
                         </div>
-                        <!--end .card-body -->
                     </div>
-                    <!--end .card -->
                 </div>
-                <!--end .card -->
                 <?=$_SESSION["user_id"]?>
                 <div class="col-lg-12">
                     <br/>
@@ -57,28 +54,15 @@ session_start();
                         </li>
                     </ul>
                 </div>
-
-                <!--end .card -->
-
-                <div class="col-lg-12 text-center">
-                    <a href="<?= URL ?>public/PDF/หมุ่เรียนที่มีสิทธิ์เลือกรายวิชาศึกษาทั่วไปประจำปีการศึกษา 1.pdf"
-                        target="_blank" class="btn btn-warning btn-lg btn-raised " role="button">
-                        <i class="fa fa-list"></i> หมู่เรียนที่มีสิทธิ์เลือกรายวิชาศึกษาทั่วไปประจำปีการศึกษา 2/2561</a>
-                </div>
-
                 <div class="col-lg-12">
                     <p class="text-lg text-danger">
                         <i class="fa fa-phone"></i>เข้าระบบไม่ได้ หรือสอบถามรายละเอียดอื่นๆ เพิ่มเติม โทร 056-717100 ต่อ 1122
                     </p>
                 </div>
-
             </div>
         </div>
-        <!--end .row -->
     </div>
-    <!--end .card-body -->
     </div>
-    <!--end .card -->
     <div class="body">
         <div class="row">
 
@@ -87,26 +71,19 @@ session_start();
                     <div class="card-body">
                         <img class="img-responsive " src="public/img/info-regis2.jpg" alt="" />
                     </div>
-                    <!--end .card-body -->
                 </div>
-                <!--end .card -->
             </div>
-
         </div>
-        <!--end .row -->
     </div>
-    <!--end .card-body -->
 </section>
-
 <script>
     $('#username').bind('keydown', function(e) {
-        if (e.keyCode == 13) { // when press ENTER key, accept the inputed value.
+        if (e.keyCode == 13) { 
             checkstu();
         }
     });
-    // var Password = $('#Password');
     $('#pass').bind('keydown', function(e) {
-        if (e.keyCode == 13) { // when press ENTER key, accept the inputed value.
+        if (e.keyCode == 13) { 
             checkstu();
         }
     });
