@@ -1,0 +1,19 @@
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `list_courses_teach` AS select concat(`courses`.`degree_th_name`,'(',`courses`.`c_year`,')') AS `degree_th_name`,`courses_teach`.`courses_year_teach` AS `courses_year_teach`,`courses_teach`.`council_approve_date` AS `council_approve_date`,`courses_teach`.`sendto_sko_date` AS `sendto_sko_date`,`courses_teach`.`sko_know_date` AS `sko_know_date`,`courses_teach`.`courses_type` AS `courses_type`,`courses_teach`.`fee_per_term` AS `fee_per_term`,`courses_teach`.`sko_know_doc` AS `sko_know_doc`,`courses_teach`.`kks_certificate_doc` AS `kks_certificate_doc`,`courses_teach`.`chg_tea_courese` AS `chg_tea_courese` from (`courses_teach` left join `courses` on((`courses_teach`.`c_id` = `courses`.`c_id`)));
+
+--
+-- VIEW  `list_courses_teach`
+
+
+
+CREATE TABLE IF NOT EXISTS `courses_teach` (
+  `c_id` int(11) NOT NULL,
+  `courses_year_teach` varchar(4) NOT NULL,
+  `council_approve_date` date DEFAULT NULL,
+  `sendto_sko_date` date DEFAULT NULL,
+  `sko_know_date` date DEFAULT NULL,
+  `courses_type` varchar(25) DEFAULT NULL,
+  `fee_per_term` decimal(7,2) DEFAULT NULL,
+  `sko_know_doc` varchar(255) DEFAULT NULL,
+  `kks_certificate_doc` varchar(255) DEFAULT NULL,
+  `chg_tea_courese` varchar(255) DEFAULT NULL
+) 
