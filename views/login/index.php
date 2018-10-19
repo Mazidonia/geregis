@@ -5,13 +5,6 @@ session_start();
     <div class="card contain-sm ">
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <img class="img-responsive " src="public/img/announce.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
                 <?=$_SESSION["user_id"]?>
                 <div class="col-lg-12">
                     <br/>
