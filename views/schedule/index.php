@@ -4,8 +4,6 @@
             <h2 class="text-primary">
                 <i class="fa fa-table"></i> ตารางเรียน ภาคการศึกษา 2/2561</h4>
         </div>
-
-        <!--end .col -->
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
