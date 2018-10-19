@@ -75,5 +75,4 @@
         </small>
     </div>
 </div><!--end .menubar-scroll-panel-->
-
-        </div>
+</div>
