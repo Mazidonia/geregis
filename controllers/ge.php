@@ -16,14 +16,7 @@ class Ge extends Controller
 
     public function index()
     {
-        // if ($this->model->nottime() > 0) {
-        //     $this->view->render('ge/nottime');
-        // } elseif ($this->model->nottime() <= 0 && $this->model->overtime() >= 0) {
-        //     $this->view->msg = $this->model->index();
-        //     $this->view->render('schedule/index');
-        // } elseif ($this->model->nottime() <= 0 && $this->model->overtime() <= 0) {
-        //     $this->view->render('ge/overtime');
-        // }
+
         $this->view->resumes = $this->model->resumes();
         $this->view->gela = $this->model->gela_open();
         $this->view->gehu = $this->model->gehu_open();

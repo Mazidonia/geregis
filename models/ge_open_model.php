@@ -23,7 +23,7 @@ SUBSTRING_INDEX(GROUP_CONCAT(concat(`teach`.`t_no`) ORDER BY `teach`.`t_no`), ',
 GROUP_CONCAT( DISTINCT(`teach`.`sec_stu`) ORDER BY `teach`.`t_no`) as`sec_stu`,
 `teach`.`rec_no` AS `rec_no`,
 `teach`.`section` AS `section`,
-SUM(DISTINCT(`teach`.`cou_now`)) AS `cou_now`,
+SUM(`teach`.`cou_now`) AS `cou_now`,
 SUM(DISTINCT(`teach`.`limits`)) AS `limits`,
 `teach`.`r_no` AS `r_no`,
 GROUP_CONCAT(DISTINCT(concat(`tbrank`.`rank_name`,`teachers`.`tea_Name`))) AS `tea_Name`
@@ -31,7 +31,7 @@ from `teach` join `subjects` on`teach`.`rec_no` = `subjects`.`rec_no`
 LEFT JOIN `teach_detail` ON `teach`.`t_no`=`teach_detail`.`t_no`
 LEFT JOIN `teachers`ON `teach_detail`.`tea_id`=`teachers`.`tea_ID`
 LEFT JOIN `tbrank` ON `teachers`.`tea_Rank`=`tbrank`.`rank_id`
-WHERE LEFT(`teach`.`sub_id`, 4)='GELA' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011')
+WHERE LEFT(`teach`.`sub_id`, 4)='GELA' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011') OR LEFT(`teach`.`sec_stu`,4)='6111')
 GROUP BY `teach`.`sub_id`,`teach`.`section`
 ORDER BY `teach`.`sub_id`,`teach`.`day_teach`";
         if (sizeof($this->db->to_Object($sql)) > 0) {
@@ -41,7 +41,6 @@ ORDER BY `teach`.`sub_id`,`teach`.`day_teach`";
 
     public function gehu_open()
     {
-        //$rows = array();
         $sql = "select
 `subjects`.`sub_id` AS `sub_id`,
 `subjects`.`sub_text` AS `sub_text`,
@@ -55,7 +54,7 @@ SUBSTRING_INDEX(GROUP_CONCAT(concat(`teach`.`t_no`) ORDER BY `teach`.`t_no`), ',
 GROUP_CONCAT( DISTINCT(`teach`.`sec_stu`) ORDER BY `teach`.`t_no`) as`sec_stu`,
 `teach`.`rec_no` AS `rec_no`,
 `teach`.`section` AS `section`,
-SUM(DISTINCT(`teach`.`cou_now`)) AS `cou_now`,
+SUM(`teach`.`cou_now`) AS `cou_now`,
 SUM(DISTINCT(`teach`.`limits`)) AS `limits`,
 `teach`.`r_no` AS `r_no`,
 GROUP_CONCAT(DISTINCT(concat(`tbrank`.`rank_name`,`teachers`.`tea_Name`))) AS `tea_Name`
@@ -63,7 +62,7 @@ from `teach` join `subjects` on`teach`.`rec_no` = `subjects`.`rec_no`
 LEFT JOIN `teach_detail` ON `teach`.`t_no`=`teach_detail`.`t_no`
 LEFT JOIN `teachers`ON `teach_detail`.`tea_id`=`teachers`.`tea_ID`
 LEFT JOIN `tbrank` ON `teachers`.`tea_Rank`=`tbrank`.`rank_id`
-WHERE LEFT(`teach`.`sub_id`, 4)='GEHU' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011')
+WHERE LEFT(`teach`.`sub_id`, 4)='GEHU' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011') OR LEFT(`teach`.`sec_stu`,4)='6111')
 GROUP BY `teach`.`sub_id`,`teach`.`section`
 ORDER BY `teach`.`sub_id`,`teach`.`day_teach`";
         if (sizeof($this->db->to_Object($sql)) > 0) {
@@ -87,7 +86,7 @@ SUBSTRING_INDEX(GROUP_CONCAT(concat(`teach`.`t_no`) ORDER BY `teach`.`t_no`), ',
 GROUP_CONCAT( DISTINCT(`teach`.`sec_stu`) ORDER BY `teach`.`t_no`) as`sec_stu`,
 `teach`.`rec_no` AS `rec_no`,
 `teach`.`section` AS `section`,
-SUM(DISTINCT(`teach`.`cou_now`)) AS `cou_now`,
+SUM(`teach`.`cou_now`) AS `cou_now`,
 SUM(DISTINCT(`teach`.`limits`)) AS `limits`,
 `teach`.`r_no` AS `r_no`,
 GROUP_CONCAT(DISTINCT(concat(`tbrank`.`rank_name`,`teachers`.`tea_Name`))) AS `tea_Name`
@@ -95,7 +94,7 @@ from `teach` join `subjects` on`teach`.`rec_no` = `subjects`.`rec_no`
 LEFT JOIN `teach_detail` ON `teach`.`t_no`=`teach_detail`.`t_no`
 LEFT JOIN `teachers`ON `teach_detail`.`tea_id`=`teachers`.`tea_ID`
 LEFT JOIN `tbrank` ON `teachers`.`tea_Rank`=`tbrank`.`rank_id`
-WHERE LEFT(`teach`.`sub_id`, 4)='GESO' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011')
+WHERE LEFT(`teach`.`sub_id`, 4)='GESO' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011') OR LEFT(`teach`.`sec_stu`,4)='6111')
 GROUP BY `teach`.`sub_id`,`teach`.`section`
 ORDER BY `teach`.`sub_id`,`teach`.`day_teach`";
         if (sizeof($this->db->to_Object($sql)) > 0) {
@@ -119,7 +118,7 @@ SUBSTRING_INDEX(GROUP_CONCAT(concat(`teach`.`t_no`) ORDER BY `teach`.`t_no`), ',
 GROUP_CONCAT( DISTINCT(`teach`.`sec_stu`) ORDER BY `teach`.`t_no`) as`sec_stu`,
 `teach`.`rec_no` AS `rec_no`,
 `teach`.`section` AS `section`,
-SUM(DISTINCT(`teach`.`cou_now`)) AS `cou_now`,
+SUM(`teach`.`cou_now`) AS `cou_now`,
 SUM(DISTINCT(`teach`.`limits`)) AS `limits`,
 `teach`.`r_no` AS `r_no`,
 GROUP_CONCAT(DISTINCT(concat(`tbrank`.`rank_name`,`teachers`.`tea_Name`))) AS `tea_Name`
@@ -127,7 +126,7 @@ from `teach` join `subjects` on`teach`.`rec_no` = `subjects`.`rec_no`
 LEFT JOIN `teach_detail` ON `teach`.`t_no`=`teach_detail`.`t_no`
 LEFT JOIN `teachers`ON `teach_detail`.`tea_id`=`teachers`.`tea_ID`
 LEFT JOIN `tbrank` ON `teachers`.`tea_Rank`=`tbrank`.`rank_id`
-WHERE LEFT(`teach`.`sub_id`, 4)='GESC' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011')
+WHERE LEFT(`teach`.`sub_id`, 4)='GESC' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011') OR LEFT(`teach`.`sec_stu`,4)='6111')
 GROUP BY `teach`.`sub_id`,`teach`.`section`
 ORDER BY `teach`.`sub_id`,`teach`.`day_teach`";
         if (sizeof($this->db->to_Object($sql)) > 0) {
