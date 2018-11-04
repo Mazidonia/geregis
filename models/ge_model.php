@@ -32,7 +32,7 @@ from `teach` join `subjects` on`teach`.`rec_no` = `subjects`.`rec_no`
 LEFT JOIN `teach_detail` ON `teach`.`t_no`=`teach_detail`.`t_no`
 LEFT JOIN `teachers`ON `teach_detail`.`tea_id`=`teachers`.`tea_ID`
 LEFT JOIN `tbrank` ON `teachers`.`tea_Rank`=`tbrank`.`rank_id`
-WHERE LEFT(`teach`.`sub_id`, 4)='GELA' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011') OR LEFT(`teach`.`sec_stu`,4)='6111')
+WHERE LEFT(`teach`.`sub_id`, 4)='GELA' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011' OR LEFT(`teach`.`sec_stu`,4)='6111') 
 GROUP BY `teach`.`sub_id`,`teach`.`section`
 ORDER BY `teach`.`sub_id`,`teach`.`day_teach`";
         if (sizeof($this->db->to_Object($sql)) > 0) {
@@ -66,7 +66,7 @@ from `teach` join `subjects` on`teach`.`rec_no` = `subjects`.`rec_no`
 LEFT JOIN `teach_detail` ON `teach`.`t_no`=`teach_detail`.`t_no`
 LEFT JOIN `teachers`ON `teach_detail`.`tea_id`=`teachers`.`tea_ID`
 LEFT JOIN `tbrank` ON `teachers`.`tea_Rank`=`tbrank`.`rank_id`
-WHERE LEFT(`teach`.`sub_id`, 4)='GEHU' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011') OR LEFT(`teach`.`sec_stu`,4)='6111')
+WHERE LEFT(`teach`.`sub_id`, 4)='GEHU' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011' OR LEFT(`teach`.`sec_stu`,4)='6111') 
 GROUP BY `teach`.`sub_id`,`teach`.`section`
 ORDER BY `teach`.`sub_id`,`teach`.`day_teach`";
         if (sizeof($this->db->to_Object($sql)) > 0) {
@@ -100,7 +100,7 @@ from `teach` join `subjects` on`teach`.`rec_no` = `subjects`.`rec_no`
 LEFT JOIN `teach_detail` ON `teach`.`t_no`=`teach_detail`.`t_no`
 LEFT JOIN `teachers`ON `teach_detail`.`tea_id`=`teachers`.`tea_ID`
 LEFT JOIN `tbrank` ON `teachers`.`tea_Rank`=`tbrank`.`rank_id`
-WHERE LEFT(`teach`.`sub_id`, 4)='GESO' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011') OR LEFT(`teach`.`sec_stu`,4)='6111')
+WHERE LEFT(`teach`.`sub_id`, 4)='GESO' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011' OR LEFT(`teach`.`sec_stu`,4)='6111') 
 GROUP BY `teach`.`sub_id`,`teach`.`section`
 ORDER BY `teach`.`sub_id`,`teach`.`day_teach`";
         if (sizeof($this->db->to_Object($sql)) > 0) {
@@ -134,7 +134,7 @@ from `teach` join `subjects` on`teach`.`rec_no` = `subjects`.`rec_no`
 LEFT JOIN `teach_detail` ON `teach`.`t_no`=`teach_detail`.`t_no`
 LEFT JOIN `teachers`ON `teach_detail`.`tea_id`=`teachers`.`tea_ID`
 LEFT JOIN `tbrank` ON `teachers`.`tea_Rank`=`tbrank`.`rank_id`
-WHERE LEFT(`teach`.`sub_id`, 4)='GESC' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011') OR LEFT(`teach`.`sec_stu`,4)='6111')
+WHERE LEFT(`teach`.`sub_id`, 4)='GESC' AND  `teach`.`term`='2/2561' AND(LEFT(`teach`.`sec_stu`,4)='5911' OR LEFT(`teach`.`sec_stu`,4)='6011' OR LEFT(`teach`.`sec_stu`,4)='6111') 
 GROUP BY `teach`.`sub_id`,`teach`.`section`
 ORDER BY `teach`.`sub_id`,`teach`.`day_teach`";
         if (sizeof($this->db->to_Object($sql)) > 0) {
